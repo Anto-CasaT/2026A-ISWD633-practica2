@@ -3,7 +3,7 @@
 Las redes son un componente fundamental que permite la comunicación entre contenedores, así como la comunicación de los contenedores con el mundo exterior.
 
 
-!\[Imagen](redes.PNG)
+![Imagen](redes.PNG)
 
 * Bridge: Esta es la red por defecto en Docker. Permite la comunicación entre contenedores en el mismo host. Cada contenedor conectado a la red bridge tiene una IP propia en la subred de la red bridge.
 
@@ -56,11 +56,29 @@ docker network ls
 
 ### Crear los contenedores y las redes que se presentan en el esquema. Usar para todos los contenedores la imagen de nginx:alpine
 
-!\[Imagen](esquema-ejercicio-redes.PNG)
+![Imagen](esquema-ejercicio-redes.PNG)
+<img width="1166" height="586" alt="image" src="https://github.com/user-attachments/assets/45b5c7d9-fe96-48be-92dc-d854943df0b8" />
 
 # COLOCAR UNA CAPTURA DE LAS REDES EXISTENTES CREADAS
+```
+docker network ls
+```
+<img width="703" height="253" alt="Captura de pantalla 2026-04-19 174005" src="https://github.com/user-attachments/assets/a69e90be-0ef3-4b83-ad29-c7e696299a00" />
+
 
 # COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
+```
+docker network inspect net-curso01
+```
+
+<img width="755" height="964" alt="Captura de pantalla 2026-04-19 174131" src="https://github.com/user-attachments/assets/23779fd2-37f0-43c5-846e-cbcbdf9b7bcd" />
+
+```
+docker network inspect net-curso02
+
+```
+<img width="835" height="980" alt="Captura de pantalla 2026-04-19 174357" src="https://github.com/user-attachments/assets/cd76f6dc-20b7-4a39-971a-8881842ec99a" />
+
 
 ### Para eliminar las redes creadas
 
